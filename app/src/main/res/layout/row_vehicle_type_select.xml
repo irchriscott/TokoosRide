@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="12dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="RtlHardcoded">
+
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boda"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18dp"
+        android:textColor="@color/colorGray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/type_name">
+
+        <ImageView
+            android:id="@+id/type_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_boda_1"
+            android:alpha="0.8"
+            android:padding="10dp"
+            android:background="@drawable/bg_unselected_image"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                tools:ignore="UselessLeaf,UselessParent">
+
+                <TextView
+                    android:id="@+id/price_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8000 Fc - 10000 Fc"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorGray"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <TextView
+                    android:id="@+id/reach_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8 Minutes"
+                    android:textSize="13dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/colorGray"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

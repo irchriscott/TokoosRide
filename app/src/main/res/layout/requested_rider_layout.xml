@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/your_rider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Votre Chauffeur"
+        android:textColor="@color/colorGray"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <LinearLayout
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_rider">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rider_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/default_user"
+            android:layout_gravity="center"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="2dp"/>
+
+        <RatingBar
+            android:id="@+id/rider_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:layout_gravity="center"
+            style="@style/AppTheme.SmallRating"
+            android:theme="@style/AppTheme.SmallRating"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rider_details_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="92dp"
+        app:layout_constraintStart_toEndOf="@id/image_view"
+        app:layout_constraintTop_toBottomOf="@id/your_rider"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/rider_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Christian Scott"
+            android:textColor="@color/colorGray"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/rider_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TR128783232, CD73874"
+            android:textColor="@color/colorGray"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <TableLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/call_rider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_call_gray_24dp"
+                        android:background="@drawable/bg_menu_button"
+                        android:padding="8dp"
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:text="Appelez"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/message_rider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chat_bubble_gray_24dp"
+                        android:background="@drawable/bg_menu_button"
+                        android:padding="8dp"
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:text="Textez"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/cancel_ride"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_cancel_gray_24dp"
+                        android:background="@drawable/bg_menu_button"
+                        android:padding="8dp"
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:text="Annulez"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

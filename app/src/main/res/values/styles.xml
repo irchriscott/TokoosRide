@@ -1,0 +1,44 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NoToolBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="ProgressBar" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:tint">@color/colorWhite</item>
+        <item name="android:foreground">@color/colorWhite</item>
+        <item name="android:indeterminateDrawable">@drawable/circular_progress</item>
+    </style>
+
+    <style name="AppTheme.SmallRating" parent="Base.Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/colorLightGray</item>
+        <item name="colorControlActivated">@color/colorYellowRate</item>
+    </style>
+
+</resources>

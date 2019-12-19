@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorWhite"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UnusedAttribute">
+
+        <TextView
+            android:id="@+id/pickup_destination_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrez Votre Destination"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorGray"
+            tools:ignore="HardcodedText,SpUsage" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addresses_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:ignore="RtlHardcoded,UnusedAttribute">
+
+        <LinearLayout
+            android:id="@+id/origin_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingRight="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_origin"
+                tools:ignore="ContentDescription" />
+            
+            <EditText
+                android:id="@+id/origin_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:background="@drawable/bg_search_input"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorGray"
+                android:hint="Cherchez votre origine"
+                android:textSize="15dp"
+                android:textColorHint="@color/colorVeryLightGray"
+                android:inputType="text"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded,SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/destination_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/origin_view">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_destination"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/destination_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:background="@drawable/bg_search_input"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorGray"
+                android:hint="Cherchez votre destination"
+                android:textSize="15dp"
+                android:textColorHint="@color/colorVeryLightGray"
+                android:inputType="text"
+                android:focusedByDefault="true"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded,SpUsage" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/bg_shaddow_bottom"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/destination_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+val maxLogSize = 1000
+                    for (i in 0..responseText.length / maxLogSize) {
+                        val start = i * maxLogSize
+                        var end = (i + 1) * maxLogSize
+                        end = if (end > responseText.length) responseText.length else end
+                        Log.i("ERROR", responseText.substring(start, end))
+                    }
